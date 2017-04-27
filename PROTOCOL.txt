@@ -1,0 +1,65 @@
+1. Protokół opiera się na jednej kolejce komunikatów.
+2. Struktura komunikatu:
+struct
+{
+	long mtype;
+	int subtype;
+	char nick[16];
+	char pass[16];
+	int date; // w przypadku komunikatów typu 1,2,3,4,5,10,11,12,50,51,52 rejestracja odsyła informację o powodzeniu operacji
+	int date2;// dodatkowe informacje np. numer mtype który aplikacja ma odbierać
+};
+struct // przesyła listę nieudanych logowań
+{
+	long mtype;
+	int subtype;
+	int data[20];
+};
+struct 
+{
+	long mtype;
+	int subtype;
+	char nick[20][16];
+	int more;//czy kolejne nicki zostaną przesłane
+};
+struct visit_send //odpowiedź na liste pacjentów
+{
+	long mtype;
+	struct visit data;
+	int more;
+};
+struct visit
+{
+	struct pdata personal;
+	int status;
+	// 0 - czeka 1 - obyta 2 - nieodbyta 3 - wymaga potwierdzenia 4 - niepotwierdzona
+	char doctor[16];
+	int doctorID;
+	int patientID;
+	long int date;
+};
+3. Typy komunikatów określa subtype, do kogo komunikat jest skierowany określa mtype. Możliwe wartości subtype:
+do rejestracji:
+1 - próba rejestracji pacjenta w systemie proces przesyła swój pid w date2
+2 - próba rejestracji lekarza w systemie proces przesyła swój pid w date2
+3 - logowanie pacjenta wraz z przesłaniem informacji o nieudanych logowaniach proces przesyła swój pid w date2
+4 - logowanie lekarza wraz z przesłaniem informacji o nieudanych logowaniach proces przesyła swój pid w date2
+5 - rejestracja pacjenta w kolejce do lekarza
+6 - prośba o przesłanie listy lekarzy przyjmujących w danym terminie
+7 - prośba o przesłanie listy dostępnych terminów w danym dniu
+8 - prośba o przesłanie listy dostępnych terminów do danego lekarza
+9 - wyświetlenie statusy wizyty
+10 - zmiana terminu wizyty
+11 - odwołanie wizyty
+12 - potwierdzenie wizyty
+20 - wylogowanie pacjenta z systemu
+50 - wylogowanie lekarza z systemu
+53 - przyjęcie pacjenta
+52 - przesłanie listy pacjentów na dziś
+51 - prośba o urlop
+od rejestracji
+odpowiedź rejestracji ma ten sam subtype co pytanie.
+
+mtype:
+1 - serwer
+numery pid to odpowiedni użytkownicy

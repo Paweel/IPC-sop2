@@ -1,0 +1,60 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CONFIRM_TIME	src/inf122499_r.c	/^const int CONFIRM_TIME = 3600 * 24 * 14;$/;"	v
+MAX_D	src/inf122499_r.c	13;"	d	file:
+MAX_P	src/inf122499_r.c	12;"	d	file:
+NULL_VISIT_SEND	src/inf122499_r.c	/^const struct visit NULL_VISIT_SEND;$/;"	v	typeref:struct:visit
+a1	src/inf122499_queue.c	/^	int a1;$/;"	m	struct:cos	file:
+a2	src/inf122499_queue.c	/^	int a2;$/;"	m	struct:cos	file:
+addAsc	src/inf122499_queue.c	/^void addAsc(struct list **head, void * element, int size, int Larger(void*,void*))$/;"	f
+addEnd	src/inf122499_queue.c	/^void addEnd(struct list  **head, void * element, int size)$/;"	f
+c	src/inf122499_queue.c	/^	char c;$/;"	m	struct:cos	file:
+checkLeave	src/inf122499_r.c	/^int checkLeave(struct doctor doctor, long int time)$/;"	f
+checkUncorfimedVisit	src/inf122499_r.c	/^int checkUncorfimedVisit(struct patient patient,struct list * queueHead)$/;"	f
+checkVisits	src/inf122499_r.c	/^void checkVisits(struct list ** queueHead, struct patient * patients)$/;"	f
+chooseDoctor	src/inf122499_r.c	/^int chooseDoctor(struct doctor * doctors, int doctors_amount, long int date)$/;"	f
+clear	src/inf122499_l.c	/^void clear(struct pdata * data)$/;"	f
+clear	src/inf122499_p.c	/^void clear(struct pdata * data)$/;"	f
+compInt	src/inf122499_queue.c	/^int compInt(void* a, void* b)$/;"	f
+compSmallStruct	src/inf122499_r.c	/^int compSmallStruct(void* a, void* b)$/;"	f
+compVisitStruct	src/inf122499_r.c	/^int compVisitStruct(void* a, void* b)$/;"	f
+cos	src/inf122499_queue.c	/^struct cos$/;"	s	file:
+del	src/inf122499_queue.c	/^struct list * del(struct list ** head, int i)$/;"	f
+delList	src/inf122499_queue.c	/^void delList(struct list ** head)$/;"	f
+findDoctor	src/inf122499_r.c	/^int findDoctor(struct doctor *tab, char *nick)$/;"	f
+findGoodDate	src/inf122499_r.c	/^struct visit findGoodDate(struct list * queueHead,struct visit visit, struct doctor *doctors,int doctors_amount)$/;"	f
+findPatient	src/inf122499_r.c	/^int findPatient(struct patient *tab, char *nick)$/;"	f
+get	src/inf122499_queue.c	/^struct list * get(struct list * head, int i)$/;"	f
+getLocalTime	src/inf122499_r.c	/^unsigned int getLocalTime()$/;"	f
+localTime	src/inf122499_r.c	/^long int localTime = 3600;$/;"	v
+log_data	src/inf122499_l.c	/^struct pdata log_data;$/;"	v	typeref:struct:pdata
+log_data	src/inf122499_p.c	/^struct pdata log_data;$/;"	v	typeref:struct:pdata
+login	src/inf122499_l.c	/^int login;$/;"	v
+login	src/inf122499_p.c	/^int login;$/;"	v
+loginErrorDoctor	src/inf122499_r.c	/^void loginErrorDoctor(struct doctor * elem)$/;"	f
+loginErrorPatient	src/inf122499_r.c	/^void loginErrorPatient(struct patient * elem)$/;"	f
+main	src/inf122499_l.c	/^int main(int argc, char** argv)$/;"	f
+main	src/inf122499_p.c	/^int main(int argc, char** argv)$/;"	f
+main	src/inf122499_r.c	/^int main(int argc, char** argv)$/;"	f
+menu	src/inf122499_l.c	/^void menu()$/;"	f
+menu	src/inf122499_p.c	/^void menu()$/;"	f
+printList	src/inf122499_r.c	/^void printList(struct list * head)$/;"	f
+printVisit	src/inf122499_l.c	/^void printVisit(struct visit_send visit)$/;"	f
+printVisit	src/inf122499_p.c	/^void printVisit(struct visit_send visit)$/;"	f
+reply	src/inf122499_r.c	/^void reply(int id, int type, int error, int pid)$/;"	f
+search	src/inf122499_queue.c	/^int search(struct list *head, void * element, int Comp(void*, void*))$/;"	f
+sendBackLoginErrorDoctor	src/inf122499_r.c	/^void sendBackLoginErrorDoctor(int id, int pid, struct doctor * elem)$/;"	f
+sendBackLoginErrorPatient	src/inf122499_r.c	/^void sendBackLoginErrorPatient(int id, int pid, struct patient * elem)$/;"	f
+sendVisit	src/inf122499_r.c	/^void sendVisit(struct patient base, int id, struct list * queueHead, int pid)$/;"	f
+sendVisitDoctor	src/inf122499_r.c	/^void sendVisitDoctor(struct doctor doctor, int id, struct list * queueHead, int pid)$/;"	f
+setStatus	src/inf122499_r.c	/^int setStatus(struct doctor doctor, struct list * queueHead,long int date, int status)$/;"	f
+showElem	src/inf122499_queue.c	/^struct list * showElem(struct list * head, int i )$/;"	f
+showLoginError	src/inf122499_l.c	/^void showLoginError()$/;"	f
+showLoginError	src/inf122499_p.c	/^void showLoginError()$/;"	f
+showVisitTime	src/inf122499_l.c	/^void showVisitTime()$/;"	f
+showVisitTime	src/inf122499_p.c	/^void showVisitTime()$/;"	f
+undoVisit	src/inf122499_r.c	/^void undoVisit(struct small_struct small_struct, struct list ** queueHead,struct patient * patients)$/;"	f
