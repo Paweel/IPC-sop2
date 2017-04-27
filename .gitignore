@@ -1,3 +1,6 @@
+patient
+reception
+doctor
 # Object files
 *.o
 *.ko
